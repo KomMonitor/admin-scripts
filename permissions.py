@@ -10,7 +10,7 @@ admin_script_secrets = os.environ.get('ADMIN_SCRIPT_SECRETS', 'secrets')
 grant_type = os.environ.get('GRANT_TYPE', 'client_credentials')
 client_id = os.environ.get('CLIENT_ID', 'kommonitor-admin-script')
 data_management = os.environ.get('DATA_MANGEMENT','data-management')
-output_dir = os.environ.get('OUTPUT_DIR','./result')
+output_dir = os.environ.get('OUTPUT_DIR','/app/result')
 
 #getToken
 url =  keycloak_auth_endpoint+'/realms/'+keycloak_realm+'/protocol/openid-connect/token'
@@ -60,4 +60,6 @@ with open(output_dir+'/results.csv', 'w', newline='') as f:
     w = csv.DictWriter(f, fieldnames= ['indikator','raumeinheit','freigaben'])
     w.writeheader()
     w.writerows(my_list)
+
+
 

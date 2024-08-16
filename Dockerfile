@@ -1,18 +1,9 @@
-
-FROM python:3.11-alpine
-
-WORKDIR /usr/app/src
-
+FROM python:3.11-alpine3.20
+WORKDIR /app
+COPY . .
+#RUN mkdir /app/result
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . ./
-
-EXPOSE 8008
-
-ENTRYPOINT ["python"]
-#CMD ["./start.py"]
-CMD [ "./start.py" ]
-
-
-
+ENTRYPOINT [ "python"]
+CMD ["permissions.py"]
