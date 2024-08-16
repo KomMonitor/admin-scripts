@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  permissions:
+      image: kommonitor/admin_script:dev
+      container_name: permission_container
+      
+      ports:
+        - 8008:8008
+
+      volumes:
+        - ./result:/usr/app/src/result
