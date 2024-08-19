@@ -22,6 +22,6 @@ DATA_MANGEMENT=data-management
 
 
 ### 2. Start Docker Compose
-Clone the repo:[Admin-scripts](https://github.com/KomMonitor/admin-scripts.git)
-Run **docker compose up** 
+Clone the repo:[Admin-scripts](https://github.com/KomMonitor/admin-scripts.git)  
+Run `docker compose up` 
 
