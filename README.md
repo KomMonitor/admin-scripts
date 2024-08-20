@@ -7,11 +7,12 @@ This Python script interacts with the Data Management API to determine which org
 - Docker
 - Docker Compose
 - Clone the repo:[Admin-scripts](https://github.com/KomMonitor/admin-scripts.git)
+- cd to repo
   
-## Setup
-### 1. build docker image
+### Setup
+#### 1. build docker image
 Run ``docker build -t kommonitor/admin_script:dev . ``
-### 2. create an .env file
+#### 2. create an .env file
 
 Ensure your `.env` file is correctly configured. Example:
 
@@ -27,6 +28,6 @@ DATA_MANGEMENT=data-management
 
 
 
-### 3. Start con 
-Run ``docker run --env-file admin_script.env -v path/to/result:/app/result kommonitor/admin_script:dev`` 
+#### 3. run the script 
+Run ``docker run --env-file admin_script.env -v path/to/result:/app/result kommonitor/admin_script:dev permissions.py`` 
 
