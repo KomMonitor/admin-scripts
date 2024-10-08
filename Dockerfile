@@ -4,6 +4,5 @@ COPY . .
 RUN mkdir /app/result
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-
 ENTRYPOINT [ "python"]
 CMD ["start.py"]
